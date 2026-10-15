@@ -1125,7 +1125,7 @@ SimplemapLoopClosure::PotentialLoopOutput SimplemapLoopClosure::find_next_loop_c
     {
         mrpt::system::CTimeLoggerEntry tle1(profiler_, "find_next_loop_closure.single");
 
-        mrpt::graphs::CDijkstra<typeof(state_.submapsGraph)> dijkstra(state_.submapsGraph, root_id);
+        mrpt::graphs::CDijkstra<decltype(state_.submapsGraph)> dijkstra(state_.submapsGraph, root_id);
 
         using tree_t =
             mrpt::graphs::CDirectedTree<const mrpt::graphs::CNetworkOfPoses3DCov::edge_t*>;
